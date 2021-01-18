@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="link-secondary" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+          <a class="blog-header-logo text-dark" href='/'>К стихам</a>
+      </div>
+      <style>
+   .fig {
+    display: block; /* Блочный элемент (для старых браузеров) */
+    text-align: center; /* Выравнивание по центру */
+    font-style: italic; /* Курсивное начертание */
+    margin-top: 0; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    color: #666;
+          }
+          </style>
+</head>
+<body style="background: GreenYellow">
+  <figure class="fig">
+   <img src="http://os1.i.ua/3/1/7434857_d2ccb4e1.jpg" width="640" height="500"
+   alt="Барельеф">
+   <figcaption>
+    Буду рад любым подаркам ,
+    что судьба  мне сможет дать. Может стану олигархом , морем в яхте рассекать ...
+
+   </figcaption>
+  </figure>
+
+{% block content %}
+   {% for val in values %}
+           <h3>{{ val }}</h3>
+   {% endfor %}
+{% endblock %}
+</body>
+</html>
